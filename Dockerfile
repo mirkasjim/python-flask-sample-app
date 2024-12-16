@@ -8,16 +8,17 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt update && apt intall python3 python3-pip -y && pip install --editable .
+RUN apt update && apt intall python3 python3-pip -y 
+#&& pip install --editable .
 
-RUN flask init-db
+#RUN flask init-db
 
 # Unit tests
 # RUN pip install pytest && pytest
 
-EXPOSE 5000
+#EXPOSE 5000
 
-CMD [ "flask", "run", "--host=0.0.0.0" ]
+#CMD [ "flask", "run", "--host=0.0.0.0" ]
 
 
 
