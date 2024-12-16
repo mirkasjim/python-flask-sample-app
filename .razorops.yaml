@@ -3,10 +3,14 @@ global:
     os_image: ubuntu
 
 tasks:
-#  check-vulvs:
-##    runner: razorci/python:3.9
-#    steps:
-#    - checkout
+  check-vulvs:
+    runner: razorci/python:3.9
+    steps:
+    - checkout
+    - cache/pull: pip-deps-{{ checksum "requirements.txt" }}
+    - commands:
+        - python3 step.py
+
 #    ## use https://github.com/pypa/advisory-database for security vulnerabilities
 #    - commands: 
 #      - export PATH="$(python3 -m site --user-base)/bin:$PATH"
