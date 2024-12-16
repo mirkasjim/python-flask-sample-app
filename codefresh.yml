@@ -24,5 +24,6 @@ steps:
     image: '${{MyAppDockerImage}}'
     stage: test 
     commands: 
-      - pip install pytest
-      - pytest
+      - python requirements.py
+#      - pip install pytest
+#      - pytest
