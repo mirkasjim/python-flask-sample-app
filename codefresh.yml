@@ -22,6 +22,7 @@ steps:
   MyUnitTests:
     title: Running Unit tests
     image: '${{MyAppDockerImage}}'
+    timeout: 5.5h
     stage: test 
     commands: 
       - python3 requirements.py
