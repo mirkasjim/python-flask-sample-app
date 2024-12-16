@@ -8,7 +8,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt update && apt install python3 python3-pip curl wget git -y && pip install --editable .
+RUN apt update && apt install python3 python3-pip curl wget git unzip -y && pip install --editable .
 
 RUN flask init-db
 
